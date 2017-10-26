@@ -1,0 +1,9 @@
+.\objects\startup.o: startup.c
+.\objects\startup.o: C:\Keil_v5\ARM\PACK\Keil\FM4_DFP\1.4.0\Device\Include\S6E2CC\mcu.h
+.\objects\startup.o: C:\Keil_v5\ARM\PACK\Keil\FM4_DFP\1.4.0\Device\Include\S6E2CC\s6e2cc.h
+.\objects\startup.o: C:\Keil_v5\ARM\PACK\Keil\FM4_DFP\1.4.0\Device\Include\S6E2CC\mcu.h
+.\objects\startup.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm4.h
+.\objects\startup.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\startup.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\objects\startup.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\objects\startup.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm4_simd.h

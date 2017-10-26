@@ -1,0 +1,56 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; An ASM File Containing sqrt() and a norm_squared() alg
+                       orithm
+    2 00000000         ;
+    3 00000000         ; Mark Wickert, February 2015
+    4 00000000         
+    5 00000000                 PRESERVE8                    ; Preserve 8 byte s
+                                                            tack alignment
+    6 00000000                 THUMB                        ; indicate THUMB co
+                                                            de is used
+    7 00000000                 AREA             |.text|, CODE, READONLY ; Start
+                                                             of the CODE area
+    8 00000000         
+    9 00000000                 EXPORT           main
+   10 00000000         main
+   11 00000000 F240 0101       MOVW             R1, #0x1
+   12 00000004 2202            MOVS             R2, #0x2
+   13 00000006 1853            ADDS             R3,R2,R1
+   14 00000008                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\chapter3_asm.d -o.\objects\chapter3_asm.o -I"D:\M.TEC
+H class material\SEM3\ARM\Assembly\RTE" -I"D:\M.TECH class material\SEM3\ARM\As
+sembly\RTE\Device\S6E2CCAJ0A" -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Inclu
+de -IC:\Keil_v5\ARM\PACK\Keil\FM4_DFP\1.4.0\Device\Include\S6E2CC --predefine="
+__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 517" --predefine="_RTE_ SETA
+ 1" --predefine="S6E2CCAJ0A SETA 1" --list=.\listings\chapter3_asm.lst chapter3
+_asm.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 7 in file chapter3_asm.s
+   Uses
+      None
+Comment: .text unused
+main 00000000
+
+Symbol: main
+   Definitions
+      At line 10 in file chapter3_asm.s
+   Uses
+      At line 9 in file chapter3_asm.s
+Comment: main used once
+2 symbols
+337 symbols in table

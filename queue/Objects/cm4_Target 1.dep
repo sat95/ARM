@@ -1,0 +1,15 @@
+Dependencies for Project 'cm4', Target 'Target 1': (DO NOT MODIFY !)
+F (.\chapter3_asm.s)(0x57A8B7F2)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I "D:\M.TECH class material\SEM3\ARM\Assembly\RTE"-I "D:\M.TECH class material\SEM3\ARM\Assembly\RTE\Device\S6E2CCAJ0A"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\FM4_DFP\1.4.0\Device\Include\S6E2CC--pd "__UVISION_VERSION SETA 517" --pd "_RTE_ SETA 1" --pd "S6E2CCAJ0A SETA 1"--list .\listings\chapter3_asm.lst --xref -o .\objects\chapter3_asm.o --depend .\objects\chapter3_asm.d)
+F (RTE\Device\S6E2CCAJ0A\startup_s6e2cc.s)(0x54604706)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I "D:\M.TECH class material\SEM3\ARM\Assembly\RTE"-I "D:\M.TECH class material\SEM3\ARM\Assembly\RTE\Device\S6E2CCAJ0A"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\FM4_DFP\1.4.0\Device\Include\S6E2CC--pd "__UVISION_VERSION SETA 517" --pd "_RTE_ SETA 1" --pd "S6E2CCAJ0A SETA 1"--list .\listings\startup_s6e2cc.lst --xref -o .\objects\startup_s6e2cc.o --depend .\objects\startup_s6e2cc.d)
+F (RTE\Device\S6E2CCAJ0A\system_s6e2cc.c)(0x54604706)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections-I "D:\M.TECH class material\SEM3\ARM\Assembly\RTE"-I "D:\M.TECH class material\SEM3\ARM\Assembly\RTE\Device\S6E2CCAJ0A"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\FM4_DFP\1.4.0\Device\Include\S6E2CC-D__UVISION_VERSION="517" -D_RTE_ -DS6E2CCAJ0A-o .\objects\system_s6e2cc.o --omf_browse .\objects\system_s6e2cc.crf --depend .\objects\system_s6e2cc.d)
+I (C:\Keil_v5\ARM\PACK\Keil\FM4_DFP\1.4.0\Device\Include\S6E2CC\mcu.h)(0x54604706)
+I (C:\Keil_v5\ARM\PACK\Keil\FM4_DFP\1.4.0\Device\Include\S6E2CC\s6e2cc.h)(0x54604706)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm4.h)(0x5625DA34)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB4EA8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)(0x5625C678)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625C678)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625C678)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmSimd.h)(0x5625C678)
+I (D:\M.TECH class material\SEM3\ARM\Assembly\RTE\Device\S6E2CCAJ0A\system_s6e2cc.h)(0x54604706)
+I (C:\Keil_v5\ARM\PACK\Keil\FM4_DFP\1.4.0\Device\Include\S6E2CC\interrupt_type.h)(0x54604706)
+F (RTE\Device\S6E2CCAJ0A\system_s6e2cc.h)(0x54604706)()

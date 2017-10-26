@@ -1,0 +1,12 @@
+Dependencies for Project 'ASM2', Target 'Target 1': (DO NOT MODIFY !)
+F (.\new.s)(0x57A8B919)(--cpu Cortex-M4.fp --li --pd "__EVAL SETA 1" -g --apcs=interwork -I "D:\M.TECH class material\SEM3\ARM\Assembly\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM4\Include--pd "__UVISION_VERSION SETA 517" --pd "_RTE_ SETA 1" --pd "ARMCM4_FP SETA 1"--list .\listings\new.lst --xref -o .\objects\new.o --depend .\objects\new.d)
+F (RTE\Device\ARMCM4_FP\startup_ARMCM4.s)(0x50B2EF74)(--cpu Cortex-M4.fp --li --pd "__EVAL SETA 1" -g --apcs=interwork -I "D:\M.TECH class material\SEM3\ARM\Assembly\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM4\Include--pd "__UVISION_VERSION SETA 517" --pd "_RTE_ SETA 1" --pd "ARMCM4_FP SETA 1"--list .\listings\startup_armcm4.lst --xref -o .\objects\startup_armcm4.o --depend .\objects\startup_armcm4.d)
+F (RTE\Device\ARMCM4_FP\system_ARMCM4.c)(0x55D44230)(-c --cpu Cortex-M4.fp -D__EVAL --li -g -O0 --apcs=interwork --split_sections-I "D:\M.TECH class material\SEM3\ARM\Assembly\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM4\Include-D__UVISION_VERSION="517" -D_RTE_ -DARMCM4_FP-o .\objects\system_armcm4.o --omf_browse .\objects\system_armcm4.crf --depend .\objects\system_armcm4.d)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM4\Include\ARMCM4_FP.h)(0x562098DC)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm4.h)(0x5625DA34)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB4EA8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)(0x5625C678)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625C678)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625C678)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmSimd.h)(0x5625C678)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM4\Include\system_ARMCM4.h)(0x55D44230)
