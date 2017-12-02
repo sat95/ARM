@@ -5,7 +5,7 @@
 	 ENTRY 
 __main  FUNCTION	
 	
-	VMOV.F32 s0, #-9		;x in exp(x)
+	VMOV.F32 s0, #9		;x in exp(x)
 	MOV r0, #0				;Precision i.e. value of y   when term (X^y)/(y!) = 0
 	VMOV.F32 s2, #1			;Denominator i.e. y!
 	VMOV.F32 s3, #1			;Numerator i.e (X^y)/(y!)
@@ -23,6 +23,6 @@ loop	VADD.F32 s4, s3
 		BNE loop			;Continue Untill F32 can handle the precision
 		
 			
-stop B stop ; stop program
+stop B stop 				; Infinte Loop at the end
      ENDFUNC
      END
