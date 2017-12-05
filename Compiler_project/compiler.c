@@ -1,9 +1,9 @@
 /*INSTRUCTION TO RUN
-./compile expression1 filename.s     -->   Generates Assembly code for expression1 into filename.s
+./compiler expression1 filename.s     -->   Generates Assembly code for expression1 into filename.s
 				or
-./compile filename.s   -->   Generates Assembly code for a default expression into filename.s
+./compiler filename.s   -->   Generates Assembly code for a default expression into filename.s
 				or
-./compile   -->   Generates Assembly code for a default expression into file with name "asm_code.s"
+./compilre   -->   Generates Assembly code for a default expression into file with name "asm_code.s"
 */
 
 
