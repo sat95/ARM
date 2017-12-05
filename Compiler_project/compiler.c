@@ -142,7 +142,7 @@ void postfix_eval(){
 	fprintf(fp,"stop B stop\t\t; Infinite Loop at the end\n\tENDFUNC\n\tEND\n");
 }
 
-/*To Check for the validity of number of and
+/*To Check for the validity of number and
 sequence of Opening and
 closing brackets in the expression*/
 int para_check(){
