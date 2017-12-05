@@ -1,4 +1,4 @@
-/*INSTRUCTIONS TO RUN
+/*INSTRUCTION TO RUN
 ./compile expression1 filename.s     -->   Generates Assembly code for expression1 into filename.s
 				or
 ./compile filename.s   -->   Generates Assembly code for a default expression into filename.s
@@ -66,7 +66,7 @@ void generate_elements(){
 			prev=0;
 		}
 	}
-	if(prev) {
+	if(prev||flag==1) {
 		input_ele[total_input].var = prev; input_ele[total_input].type = 1;
 		total_input++;
 	}
@@ -157,7 +157,7 @@ int para_check(){
 int main(int argc, char **argv)
 {
 	int i;
-	char str[] = "(32.87-(23+(54/45))*(5.3/6.5))+98.99";//"23+91-(67*(21+32))";
+	char str[] = "(32.87-(23+(54/45))*(5.3/6.5))+96.99";//"23+91-(67*(21+32))";
 	input_str = str;
 	if(argc==3){
             input_str = argv[1];
