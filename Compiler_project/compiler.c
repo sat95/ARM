@@ -14,6 +14,7 @@
 #define max 256
 #define MEM 0x20000000
 
+void unary_operator(void);
 FILE *fp;
 char stack[max];
 int stack_top=-1;
@@ -22,8 +23,8 @@ typedef struct{
 	double var;
 	int type;
 }element;
-element input_ele[max],output_ele[max];
-int total_input,total_output;
+element input_ele[max],output_ele[max],*temp;
+int total_input,total_output,temp_size;
 int priority[256]={0},given[]={'(','*','/','%','+','-','&','^','|'};
 char *opcode[]={"DUMMY_BRAC","VMUL.F32","VDIV.F32","DUMMY_MOD"
 				,"VADD.F32","VSUB.F32","DUMMY_AND","DUMMY_XOR","DUMMY_OR"};
@@ -70,8 +71,43 @@ void generate_elements(){
 		input_ele[total_input].var = prev; input_ele[total_input].type = 1;
 		total_input++;
 	}
+	unary_operator();
 }
 
+/*Unary Operator Check*/
+void unary_operator(){
+    int i,j,count;
+    temp = (element *)malloc(max*sizeof(element));
+    j=0;
+    for(i=0;i<total_input;i++){
+        if(((char)input_ele[i].var=='-'||(char)input_ele[i].var=='+')&&((i-1)==-1||input_ele[i-1].type==0)){
+            temp[j].var = '('; temp[j].type=0; j++;
+            temp[j].var = 0; temp[j].type=1; j++;
+            temp[j].var = input_ele[i].var; temp[j].type = 0; j++; i++;
+            if(input_ele[i].var=='('){
+                temp[j]=input_ele[i]; j++;
+                count=1;
+                while(count!=0){
+                    i++;
+                    if((char)input_ele[i].var=='(') count++;
+                    else if ((char)input_ele[i].var==')') count--;
+                    temp[j]=input_ele[i]; j++;
+                }
+                temp[j].var=')'; temp[j].type = 0; j++;
+            }
+            else{
+                temp[j] = input_ele[i]; j++;
+                temp[j].var = ')'; temp[j].type=0; j++;
+            }
+        }
+        else temp[j++] = input_ele[i];
+    }
+    temp_size = j; j=0;
+    printf("Temp Infix:\n");
+    for(i=0;i<temp_size;i++)
+        input_ele[j++] = temp[i];
+    total_input = i;
+}
 /*Check if stack is empty*/
 int stack_empty(){
 	if(stack_top==-1) return 1;
@@ -142,7 +178,7 @@ void postfix_eval(){
 	fprintf(fp,"stop B stop\t\t; Infinite Loop at the end\n\tENDFUNC\n\tEND\n");
 }
 
-/*To Check for the validity of number and
+/*To Check for the validity of number of and
 sequence of Opening and
 closing brackets in the expression*/
 int para_check(){
@@ -157,7 +193,7 @@ int para_check(){
 int main(int argc, char **argv)
 {
 	int i;
-	char str[] = "(32.87-(23+(54/45))*(5.3/6.5))+96.99";//"23+91-(67*(21+32))";
+	char str[] = "5*-(2+3)/6/0";//"(32.87-(23+(54/45))*(5.3/6.5))+96.99";//"23+91-(67*(21+32))";
 	input_str = str;
 	if(argc==3){
             input_str = argv[1];
@@ -175,6 +211,7 @@ int main(int argc, char **argv)
 		if(input_ele[i].type==0) printf("%c ",(char)input_ele[i].var);
 		else printf("%.2f ",input_ele[i].var);
 	}
+	printf("\n");
 	printf("\n");
 	infix_to_postfix();
 	printf("\nPostfix:\n");
