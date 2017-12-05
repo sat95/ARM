@@ -80,7 +80,7 @@ void unary_operator(){
     temp = (element *)malloc(max*sizeof(element));
     j=0;
     for(i=0;i<total_input;i++){
-        if(((char)input_ele[i].var=='-'||(char)input_ele[i].var=='+')&&((i-1)==-1||input_ele[i-1].type==0)){
+        if(((char)input_ele[i].var=='-'||(char)input_ele[i].var=='+')&&((i-1)==-1||(input_ele[i-1].type==0&&(char)input_ele[i-1].var!=')'))){
             temp[j].var = '('; temp[j].type=0; j++;
             temp[j].var = 0; temp[j].type=1; j++;
             temp[j].var = input_ele[i].var; temp[j].type = 0; j++; i++;
@@ -193,7 +193,7 @@ int para_check(){
 int main(int argc, char **argv)
 {
 	int i;
-	char str[] = "5*-(2+3)/6/0";//"(32.87-(23+(54/45))*(5.3/6.5))+96.99";//"23+91-(67*(21+32))";
+	char str[] = "(32.87*-(23+(54/45))*(5.3/6.5))+96.99";//"23+91-(67*(21+32))";
 	input_str = str;
 	if(argc==3){
             input_str = argv[1];
