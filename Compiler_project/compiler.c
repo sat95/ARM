@@ -208,7 +208,7 @@ int main(int argc, char **argv)
 	precedence_init();
 	printf("Operator Precedence\n");
 	for(i=0;i<256;i++) if(priority[i]) printf("Char=%c ASCII=%d Precedance=%d\n",i,i,priority[i]);
-	if(para_check()) return 0;
+	if(para_check()){printf("Incorrect Parenthesis\n");return 0;}
 	generate_elements();
 	printf("\nInfix:\n");
 	for(i=0;i<total_input;i++){
