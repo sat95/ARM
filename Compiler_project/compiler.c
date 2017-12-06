@@ -1,9 +1,9 @@
 /*INSTRUCTION TO RUN
-./compiler expression1 filename.s     -->   Generates Assembly code for expression1 into filename.s
+./compile expression1 filename.s     -->   Generates Assembly code for expression1 into filename.s
 				or
-./compiler filename.s   -->   Generates Assembly code for a default expression into filename.s
+./compile filename.s   -->   Generates Assembly code for a default expression into filename.s
 				or
-./compilre   -->   Generates Assembly code for a default expression into file with name "asm_code.s"
+./compile   -->   Generates Assembly code for a default expression into file with name "asm_code.s"
 */
 
 
@@ -193,7 +193,11 @@ int para_check(){
 int main(int argc, char **argv)
 {
 	int i;
-	char str[] = "(32.87*-(23+(54/45))*(5.3/6.5))+96.99";//"23+91-(67*(21+32))";
+	char str[100];
+	FILE *ip;
+	ip = fopen("expression.txt","r");
+	fscanf(ip,"%[^\n]s ",str);
+	fclose(ip);
 	input_str = str;
 	if(argc==3){
             input_str = argv[1];
